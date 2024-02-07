@@ -8,8 +8,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 public class Alimentos extends Produto{
 
     @Id
@@ -30,7 +34,10 @@ public class Alimentos extends Produto{
         this.dataFabricacao = dataFabricacao;
         this.ingredientes = ingredientes;
         this.importado = importado;
-    }                     
+    }
+
+
+
 
     public void setValidade(Date validade){
         this.validade = validade;
